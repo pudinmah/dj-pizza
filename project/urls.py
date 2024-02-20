@@ -6,6 +6,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('auth/', include('authentication.urls')),
     path('order/', include('orders.urls')),
+    path('auth/', include('djoser.urls.authtoken')),
+    
+    path('auth/', include('djoser.urls.jwt')),
 
 
 ]
