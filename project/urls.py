@@ -1,13 +1,12 @@
 
 from django.contrib import admin
 from django.urls import path,include
+from rest_framework.routers import DefaultRouter
 
 urlpatterns = [
+    path('',include('orders.urls')),
     path('admin/', admin.site.urls),
     path('auth/', include('authentication.urls')),
-    path('order/', include('orders.urls')),
-    path('auth/', include('djoser.urls.authtoken')),
-    
     path('auth/', include('djoser.urls.jwt')),
 
 
